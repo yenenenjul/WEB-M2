@@ -25,6 +25,12 @@ for (let i = 0; i < localStorage.length; i++) {
 }
 </script>
 
+<!-- assume this is inside order list -->
+<div class="order">
+  <p>Order #12345 - Student Name</p>
+  <button class="btn-ready" onclick="markReady(12345)">Ready</button>
+</div>
+
 <h2>Admin Orders</h2>
 <div id="orders"></div>
 
@@ -61,3 +67,4 @@ function ready(key) {
 
 </body>
 </html>
+
