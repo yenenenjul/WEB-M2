@@ -124,7 +124,6 @@ document.addEventListener("DOMContentLoaded", () => {
             student: currentUser,
             cart,
             total,
-            pickup: pickupTime.value,
             payment: payment.value,
             status: "PENDING"
         };
@@ -148,3 +147,15 @@ setInterval(() => {
         }
     }
 }, 5000);
+
+function markReady(orderId) {
+  // Update UI to show order is ready
+  alert(`Order #${orderId} is ready!`);
+
+  // Optionally you can update the page visually:
+  const btn = event.target;
+  btn.disabled = true;
+  btn.style.background = "#6c757d";
+  btn.innerText = "Ready ✔";
+}
+
